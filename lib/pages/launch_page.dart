@@ -152,12 +152,14 @@ class LaunchPage extends StatelessWidget {
             const Spacer(),
             GestureDetector(
               onTap: () {
-                Navigator.pushReplacement<void, void>(
+                Navigator.push(
                   context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const HomePage(),
-                  ),
+                  MaterialPageRoute(builder: (context) => HomePage()),
                 );
+                // Navigator.pushReplacement<void, void>(
+                //   context,
+                //   const HomePage(),
+                // );
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),

@@ -1,5 +1,5 @@
-import 'package:books_arena/pages/launch_page.dart';
 import 'package:books_arena/pages/loginpage.dart';
+import 'package:books_arena/pages/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,24 +12,27 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Color(0xFF3D5A80), // Aesthetic primary color
-        // accentColor: Color(0xFF98C1D9), // Soft accent color
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          secondary: Color(0xFF98C1D9), // Replaces accentColor
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Color(0xFF3D5A80), // Aesthetic primary color
+          // accentColor: Color(0xFF98C1D9), // Soft accent color
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            secondary: Color(0xFF98C1D9), // Replaces accentColor
+          ),
+          fontFamily: 'Roboto',
+          textTheme: TextTheme(
+            // bodyText1: TextStyle(color: Color(0xFF293241)),
+            // bodyText2: TextStyle(color: Color(0xFF3D5A80)),
+            // button: TextStyle(color: Colors.white),
+            bodyLarge:
+                TextStyle(color: Color(0xFF293241)), // Replaces bodyText1
+            bodyMedium:
+                TextStyle(color: Color(0xFF3D5A80)), // Replaces bodyText2
+            labelLarge: TextStyle(color: Colors.white), // Replaces button
+          ),
         ),
-        fontFamily: 'Roboto',
-        textTheme: TextTheme(
-          // bodyText1: TextStyle(color: Color(0xFF293241)),
-          // bodyText2: TextStyle(color: Color(0xFF3D5A80)),
-          // button: TextStyle(color: Colors.white),
-          bodyLarge: TextStyle(color: Color(0xFF293241)), // Replaces bodyText1
-          bodyMedium: TextStyle(color: Color(0xFF3D5A80)), // Replaces bodyText2
-          labelLarge: TextStyle(color: Colors.white), // Replaces button
-        ),
-      ),
-      home: LoginPage(),
-    );
+        home: SplashScreen()
+        // LoginPage(),
+        );
   }
 }
