@@ -15,7 +15,7 @@ class _SchimmerPageState extends State<SchimmerPage> {
   void initState() {
     super.initState();
     // Simulate a network call or any async process
-    Future.delayed(Duration(seconds: 100), () {
+    Future.delayed(Duration(seconds: 3), () {
       setState(() {
         _isLoading = false;
       });
