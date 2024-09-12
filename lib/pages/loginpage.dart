@@ -1,3 +1,4 @@
+import 'package:books_arena/pages/forget_password.dart';
 import 'package:books_arena/pages/schimmer_page.dart';
 import 'package:books_arena/pages/signuppage.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,20 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30),
+              TextButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ForgotPasswordPage(),
+                    ),
+                  );
+                },
+                child: Text(
+                  "Forget Password?",
+                  style: TextStyle(color: Colors.grey),
+                ),
+              ),
               ElevatedButton(
                 onPressed: () {
                   // Navigate to the next page
